@@ -22,6 +22,7 @@ function wishMe() {
     } else {
         speak("Good Evening Sir...");
     }
+    speak("I am JARVIS, Your Personal Assistant. How May I Help You?");
 }
 
 window.addEventListener('load', () => {
