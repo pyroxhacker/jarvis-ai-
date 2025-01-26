@@ -47,7 +47,13 @@ btn.addEventListener('click', () => {
 
 function takeCommand(message) {
     if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello Sir, How May I Help You?");
+        speak("Hello Sir or mam, How May I Help You?");
+    } else if (message.includes("play hindi music")){
+        window.open("https://www.youtube.com/watch?v=Tl4KpUpOOwo");
+        speak("Playing ");
+    } else if (message.includes("play english music")){
+        window.open("https://www.youtube.com/watch?v=Wr1KbcjIW8Q");
+        speak("Playing ");    
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
         speak("Opening Google...");
@@ -73,15 +79,13 @@ function takeCommand(message) {
         const date = new Date().toLocaleString(undefined, { month: "short", day: "numeric" });
         const finalText = "Today's date is " + date;
         speak(finalText);
-    } else if (message.includes('calculator')) {
+    } else if (message.includes('calculator')) {    
         window.open('Calculator:///');
         const finalText = "Opening Calculator";
         speak(finalText);
-        } else if (message.includes('stop') || message.includes('exit')) {
+    } else if (message.includes('stop') || message.includes('exit')) {
         speak("Goodbye! , have a nice day for you sir or mam");
-    } else {
-        window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-        const finalText = "I found some information on the internet regarding " + message;
-        speak(finalText);
     }
+    
+    
 }
