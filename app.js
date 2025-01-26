@@ -86,6 +86,10 @@ function takeCommand(message) {
     } else if (message.includes('stop') || message.includes('exit')) {
         speak("Goodbye! , have a nice day for you sir or mam");
     }
-    
+     else {
+        window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
+        const finalText = "I found some information for " + message + " on Google";
+        speak(finalText);
+    }
     
 }
